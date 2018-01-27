@@ -13,85 +13,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: STD_Track_A
   mEventList:
-  - mStartSample: 66150
-    mEndSample: 66150
-  - mStartSample: 88200
-    mEndSample: 88200
-  - mStartSample: 110250
-    mEndSample: 110250
-  - mStartSample: 154350
-    mEndSample: 154350
-  - mStartSample: 220500
-    mEndSample: 220500
-  - mStartSample: 242550
-    mEndSample: 242550
-  - mStartSample: 264600
-    mEndSample: 264600
-  - mStartSample: 286650
-    mEndSample: 286650
-  - mStartSample: 308700
-    mEndSample: 308700
-  - mStartSample: 330750
-    mEndSample: 330750
-  - mStartSample: 396900
-    mEndSample: 396900
-  - mStartSample: 441000
-    mEndSample: 441000
-  - mStartSample: 507150
-    mEndSample: 507150
-  - mStartSample: 551250
-    mEndSample: 551250
-  - mStartSample: 595350
-    mEndSample: 595350
-  - mStartSample: 639450
-    mEndSample: 639450
-  - mStartSample: 683550
-    mEndSample: 683550
-  - mStartSample: 727650
-    mEndSample: 727650
-  - mStartSample: 771750
-    mEndSample: 771750
-  - mStartSample: 815850
-    mEndSample: 815850
-  - mStartSample: 859950
-    mEndSample: 859950
-  - mStartSample: 970200
-    mEndSample: 970200
-  - mStartSample: 992250
-    mEndSample: 992250
-  - mStartSample: 1014300
-    mEndSample: 1014300
-  - mStartSample: 1036350
-    mEndSample: 1036350
-  - mStartSample: 1058400
-    mEndSample: 1058400
+  - mStartSample: 0
+    mEndSample: 4725
+  - mStartSample: 70875
+    mEndSample: 80325
+  - mStartSample: 146475
+    mEndSample: 155925
+  - mStartSample: 222075
+    mEndSample: 231525
+  - mStartSample: 297675
+    mEndSample: 307125
+  - mStartSample: 373275
+    mEndSample: 382725
+  - mStartSample: 448875
+    mEndSample: 458325
   _SerializedPayloadTypes:
   - SonicBloom.Koreo.ColorPayload
-  - SonicBloom.Koreo.TextPayload
   _AssetPayloads: []
   _AssetPayloadIdxs: 
   _ColorPayloads:
-  - mColorVal: {r: 0.9464503, g: 1, b: 0.029411793, a: 1}
-  - mColorVal: {r: 1.0147059, g: 0.5668357, b: 0, a: 1}
-  - mColorVal: {r: 0.9117647, g: 0.08044985, b: 0.08044985, a: 1}
-  - mColorVal: {r: 1, g: 0, b: 0, a: 1}
-  - mColorVal: {r: 0.19697212, g: -0.00746108, b: 1.0147059, a: 1}
-  - mColorVal: {r: 0.28795537, g: 0.15181659, b: 0.8602941, a: 1}
-  - mColorVal: {r: 0.2445196, g: 0.15051903, b: 0.6397059, a: 1}
-  - mColorVal: {r: 0.22810909, g: 0.20891003, b: 0.30882353, a: 1}
-  - mColorVal: {r: 1, g: 1, b: 1, a: 1}
-  - mColorVal: {r: 0.15441178, g: 0.75, b: 0.45425949, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
-  - mColorVal: {r: 0.17030708, g: 0.48841718, b: 0.9264706, a: 1}
-  - mColorVal: {r: 1, g: 1, b: 1, a: 1}
-  - mColorVal: {r: 0.8161765, g: 0.62579054, b: 0.12602727, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
   - mColorVal: {r: 1, g: 1, b: 1, a: 1}
-  _ColorPayloadIdxs: 0000000001000000020000000300000004000000050000000600000007000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000
+  _ColorPayloadIdxs: 00000000010000000200000003000000040000000500000006000000
   _CurvePayloads: []
   _CurvePayloadIdxs: 
   _FloatPayloads: []
@@ -102,10 +50,5 @@ MonoBehaviour:
   _IntPayloadIdxs: 
   _SpectrumPayloads: []
   _SpectrumPayloadIdxs: 
-  _TextPayloads:
-  - mTextVal: G
-  - mTextVal: G
-  - mTextVal: G
-  - mTextVal: G
-  - mTextVal: G
-  _TextPayloadIdxs: 1500000016000000170000001800000019000000
+  _TextPayloads: []
+  _TextPayloadIdxs: 

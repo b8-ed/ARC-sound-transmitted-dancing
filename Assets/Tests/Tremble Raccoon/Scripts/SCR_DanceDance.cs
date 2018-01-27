@@ -28,7 +28,7 @@ public class SCR_DanceDance : MonoBehaviour {
             return;
         //lol
         //Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.X) && Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.V)
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey((SCR_GameManager.key + "").ToLower()))
             Dance();
     }
 

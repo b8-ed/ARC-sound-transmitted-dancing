@@ -6,7 +6,7 @@ public class SCR_DanceDance : MonoBehaviour {
 
     public Rigidbody[] bone;
 
-    private float danceForce = 500;
+    private float danceForce = 600;
     private Slider danceMeter;
     private SCR_GameManager gameManager;
     private float idleTimer = 0.5f;
@@ -28,7 +28,7 @@ public class SCR_DanceDance : MonoBehaviour {
     {
         if (!SCR_GameManager.start)
             return;
-        if(Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
             if (Input.anyKeyDown == Input.GetKeyDown((SCR_GameManager.key + "").ToLower()))
                 Dance();
@@ -40,29 +40,24 @@ public class SCR_DanceDance : MonoBehaviour {
 
     void Miss()
     {
-         danceMeter.value -= 0.01f;
+         danceMeter.value -= 0.1f;
          gameManager.letter.color = Color.red;
     }
 
     void Idle()
     {
-        if (gameManager.letter.color == Color.white || gameManager.letter.color == Color.yellow)
-        {
             idleTimer -= Time.deltaTime;
             if (idleTimer < 0)
             {
                 gameManager.letter.color = Color.yellow;
-                danceMeter.value -= 0.005f;
+                danceMeter.value -= 0.001f;
             }
-        }
-        else
-        {
-            idleTimer = 0.5f;
-        }
     }
 
     public void Dance()
     {
+        //Reset Idle Timer
+        idleTimer = 0.5f;
         //Get a random bone
         int rand = Random.Range(0, bone.Length);
         //Get a random force direction

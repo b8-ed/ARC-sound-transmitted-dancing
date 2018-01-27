@@ -11,8 +11,10 @@ public class SCR_GameManager : MonoBehaviour {
     public Transform gamePosition;
     public Text finalCountDown;
     public Slider danceParty;
-    public float keyFrequency = 1.0f;
+    public float keyFrequency = 1.5f;
     public Text letter;
+    public Image keyCDSprite;
+    public float keyCD = 0;
 
     private float timer = 3.0f;
     private float turnOffTimer = 4.0f;
@@ -25,16 +27,10 @@ public class SCR_GameManager : MonoBehaviour {
 
     private void Update()
     {
-        if (danceParty.value < 0.5f)
-            keyFrequency = 1.5f;
-        if (danceParty.value > 0.5f && danceParty.value < 0.75f)
-            keyFrequency = 1.0f;
-        else if (danceParty.value > 0.75f)
-            keyFrequency = 0.75f;
+        KeyCoolDown();
 
         if (start)
             return;
-
         timer -= Time.deltaTime;
         turnOffTimer -= Time.deltaTime;
 
@@ -57,11 +53,28 @@ public class SCR_GameManager : MonoBehaviour {
 
     IEnumerator ChangeKey()
     {
+        yield return new WaitForSeconds(keyFrequency);
+
+        if (danceParty.value < 0.5f)
+            keyFrequency = 1.5f;
+        if (danceParty.value > 0.5f && danceParty.value < 0.75f)
+            keyFrequency = 1.0f;
+        else if (danceParty.value > 0.75f)
+            keyFrequency = 0.8f;
+        keyCD = keyFrequency;
+        letter.color = Color.white;
         key = (char)('A' + Random.Range(0, 4));
         letter.text = key + "";
-        yield return new WaitForSeconds(keyFrequency);
-        letter.color = Color.white;
-        letter.text = "";
         StartCoroutine(ChangeKey());
+    }
+
+    void KeyCoolDown()
+    {
+        keyCD -= Time.deltaTime;
+        float newFillAmount = ((keyCD * 100) / keyFrequency) * 0.01f;
+        keyCDSprite.fillAmount = Mathf.Lerp(keyCDSprite.fillAmount, newFillAmount, Time.deltaTime * 100);
+
+        if (start)
+            keyCDSprite.enabled = true;
     }
 }

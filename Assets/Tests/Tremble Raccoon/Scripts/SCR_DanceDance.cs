@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class SCR_DanceDance : MonoBehaviour {
 
     public Rigidbody[] bone;
-    public float danceForce = 300;
+    public float danceForce = 400;
 
     private Slider danceMeter;
 
@@ -19,22 +19,22 @@ public class SCR_DanceDance : MonoBehaviour {
     private void Start()
     {
         danceMeter = FindObjectOfType<Slider>();
+        danceMeter.value = 0.2f;
     }
 
     private void Update()
     {
+        if (!SCR_GameManager.start)
+            return;
         //lol
         //Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.F) && Input.GetKey(KeyCode.X) && Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.V)
-        DanceMeter();
         if (Input.GetKey(KeyCode.Space))
             Dance();
     }
 
-    void DanceMeter()
+    void Miss()
     {
-        if (danceMeter.value <= 0)
-            return;
-         danceMeter.value -= 0.05f * Time.deltaTime;
+         danceMeter.value -= 0.1f;
     }
 
     public void Dance()

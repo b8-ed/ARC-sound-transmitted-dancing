@@ -16,8 +16,6 @@ public class SCR_RaccoonManager : MonoBehaviour {
             raccoons[i].dancingPosition = GameObject.Find("Dancing Raccoon Position (" + raccoonCounter + ")").transform;
             raccoons[i].boredPosition = GameObject.Find("Bored Raccoon Position (" + raccoonCounter + ")").transform;
             raccoons[i].myChanceToShine = (i + 1) * value;
-            if (i == raccoons.Length - 1)
-                raccoons[i].myChanceToShine = 0.95f;
         }
     }
 }

@@ -10,9 +10,9 @@ public class SCR_GameManager : MonoBehaviour {
 
     public Transform gamePosition;
     public Text finalCountDown;
-    public Text letter;
     public Slider danceParty;
     public float keyFrequency = 1.0f;
+    public Text letter;
 
     private float timer = 3.0f;
     private float turnOffTimer = 4.0f;
@@ -20,26 +20,17 @@ public class SCR_GameManager : MonoBehaviour {
     private void Start()
     {
         key = (char)('A' + Random.Range(0, 26));
+        danceParty = FindObjectOfType<Slider>();
     }
 
     private void Update()
     {
-        if (danceParty.value > 0.5f)
-        {
-            keyFrequency = 0.6f;
-        }
-
-        if (danceParty.value > 0.75f)
-        {
-            Debug.Log("SOY VIP");
-            keyFrequency = 0.4f;
-        }
-
         if (danceParty.value < 0.5f)
-        {
-            Debug.Log("SIGO AQUI GOT DANGIT ELIZABETH");
+            keyFrequency = 1.5f;
+        if (danceParty.value > 0.5f && danceParty.value < 0.75f)
             keyFrequency = 1.0f;
-        }
+        else if (danceParty.value > 0.75f)
+            keyFrequency = 0.75f;
 
         if (start)
             return;
@@ -66,11 +57,10 @@ public class SCR_GameManager : MonoBehaviour {
 
     IEnumerator ChangeKey()
     {
-        key = (char)('A' + Random.Range(0, 26));
-        Debug.Log(key);
+        key = (char)('A' + Random.Range(0, 4));
         letter.text = key + "";
         yield return new WaitForSeconds(keyFrequency);
-
+        letter.color = Color.white;
         letter.text = "";
         StartCoroutine(ChangeKey());
     }

@@ -12,6 +12,15 @@ public class STD_Keys : MonoBehaviour {
     [Tooltip("Todas las teclas posibles a elegir")]
     public KeyCode[] possibleKeys;                  //todas las teclas posibles (de estas se ira escogiendo 1 random)
     private KeyCode currentKey = KeyCode.None;      //la tecla que actualmente se muestra en pantalla
+    private List<KeyCode> allSongKeys;              //todas las teclas que se presionaran durante la cancion
+    int currentEventIndex = 0;                      //indice del evento actual
+    int allSongsCount = 0;
+    int currentSampleRate = 0;
+    float spawnY;                                   //posicion en la que se va a spawnear el texto siguiente
+    int currentEventStart = 0;
+
+    public Text txtPrev0;  //texto para mostrar una tecla despues
+    public Text txtPrev1;  // texto para mostrar dos teclas despues
 
     private bool wasCurrentKeyPressed = false;
 
@@ -20,7 +29,7 @@ public class STD_Keys : MonoBehaviour {
     private void Start()
     {
         HideUI();
-        if(dance == null)
+        if (dance == null)
             dance = FindObjectOfType<SCR_DanceDance>();
     }
 
@@ -29,18 +38,42 @@ public class STD_Keys : MonoBehaviour {
         return currentKey;
     }
 
+    public void SetAllSongKeys(int eventCount)
+    {
+        allSongKeys = new List<KeyCode>();
+        for(int i = 0; i < eventCount; i++)
+        {
+            int indexRandKey = Random.Range(0, possibleKeys.Length);
+            allSongKeys.Add(possibleKeys[indexRandKey]);
+            print(i + " " + possibleKeys[indexRandKey]);
+        }
+        allSongsCount = eventCount;
+    }
+
     //Genera una tecla a presionar random 
     public void GenerateRandomKey(float currentEventTime, float nextEventTime, int sampleRate, bool isLastEvent = false)
     {
         if(possibleKeys != null)
-        {
-            int indexRandKey = Random.Range(0, possibleKeys.Length);
-            keyDisplay.text = possibleKeys[indexRandKey].ToString();
+        {            
+            currentKey = allSongKeys[currentEventIndex];
+            keyDisplay.text = currentKey.ToString();
             wasCurrentKeyPressed = false;
-            currentKey = possibleKeys[indexRandKey];
             SetTime(currentEventTime, nextEventTime, sampleRate, isLastEvent);   // set max time and slider values
             keyTimeSlider.gameObject.SetActive(true);   //make sure we're displaying slider
             StartCoroutine(UpdateSlider());            //start the countdown with the slider
+            currentEventStart = (int)currentEventTime;
+            //mostrar las teclas que van despues
+            if (currentEventIndex + 1 < allSongsCount)
+            {
+                txtPrev0.text = allSongKeys[currentEventIndex + 1].ToString();
+            }
+            else
+                txtPrev0.text = "";
+            if (currentEventIndex + 2 < allSongsCount)
+                txtPrev1.text = allSongKeys[currentEventIndex + 2].ToString();
+            else
+                txtPrev1.text = "";
+            currentEventIndex++;        //aumentar el index para el siguiente evento
         }
     }
 
@@ -55,6 +88,7 @@ public class STD_Keys : MonoBehaviour {
             timeToPressKey = 1.5f;
         keyTimeSlider.maxValue = timeToPressKey;
         keyTimeSlider.value = timeToPressKey;
+        currentSampleRate = sampleRate;
     }
     
     IEnumerator UpdateSlider()
@@ -75,6 +109,7 @@ public class STD_Keys : MonoBehaviour {
         }
     }
 
+    
     //Oculta el slider en el que se muestra al usuario el tiempo que tiene para presionar tecla
     //y el texto del input lo pone vacio
     void HideUI()

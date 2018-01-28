@@ -16,18 +16,20 @@ public class SCR_FeelingIt : MonoBehaviour {
     private NavMeshAgent navMesh;
     public Slider danceMeter;
 
+    public Transform squid;
+
     private void Start()
     {
         navMesh = GetComponent<NavMeshAgent>();
        // danceMeter = FindObjectOfType<Slider>();
-        transform.LookAt(GameObject.Find("K-Lmao").transform);
+        transform.LookAt(squid);
     }
 
     private void Update()
     {
         if (danceMeter.value >= myChanceToShine)
         {
-            Vector3 klmaoPosition = GameObject.Find("K-Lmao").transform.position;
+            Vector3 klmaoPosition = squid.position;
             navMesh.SetDestination(dancingPosition.position);
 
             Vector3 playerPos = klmaoPosition - transform.position;

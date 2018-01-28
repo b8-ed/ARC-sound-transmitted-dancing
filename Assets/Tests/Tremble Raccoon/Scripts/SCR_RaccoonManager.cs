@@ -6,7 +6,7 @@ public class SCR_RaccoonManager : MonoBehaviour {
 
     public SCR_FeelingIt[] raccoons;
     private float value;
-    private void Awake()
+    private void Start()
     {
         value = raccoons.Length * raccoons.Length;
         value = raccoons.Length / value;

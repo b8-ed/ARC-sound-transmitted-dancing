@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class SCR_DanceDance : MonoBehaviour {
 
     public Rigidbody[] bone;
@@ -56,7 +57,26 @@ public class SCR_DanceDance : MonoBehaviour {
     public void Miss()
     {
          danceMeterValue -= (danceVal / 2);
+        if (danceMeterValue <= 0)
+            StartCoroutine(WaitToLoose());
          //gameManager.letter.color = Color.red;
+    }
+
+    IEnumerator WaitToLoose()
+    {
+        yield return new WaitForSeconds(3);
+        if(danceMeterValue <= 0)
+        {
+            //loose
+            GameOver();
+        }
+    }
+
+    public void GameOver(bool didPlayerWin = false)
+    {
+        STD_GameOver.lastSceneName = SceneManager.GetActiveScene().name;
+        STD_GameOver.youWin = didPlayerWin;
+        SceneManager.LoadScene("Game Over");
     }
 
     void Idle()
@@ -78,6 +98,8 @@ public class SCR_DanceDance : MonoBehaviour {
             puns[randPun].DisplayPun();
         }
 
+        danceMeterValue += danceVal;
+
         //Reset Idle Timer
         idleTimer = 0.5f;
         //Get a random bone
@@ -92,9 +114,6 @@ public class SCR_DanceDance : MonoBehaviour {
             mayTheForceBeWithYou = Vector3.forward;
         else
             mayTheForceBeWithYou = -Vector3.forward;
-        //Move it move it
-        //if(bone.Length > 0)
-        //    bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
         danceMeterValue += danceVal;
 
         direction *= -1;

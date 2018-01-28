@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SCR_MainMenuManager : MonoBehaviour {
 
-    [Header("Scene to Load")]
-    public string sceneToLoad;
+    //[Header("Scene to Load")]
+    string sceneToLoad = "escenario";
 
     [Header("Main Menu Elements")]
     public GameObject GO_MainMenu;
@@ -75,7 +75,7 @@ public class SCR_MainMenuManager : MonoBehaviour {
 
     public void OnPlayClicked()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(sceneToLoad + (DiskIndex + 1));
     }
 
 	public void OnBackClicked()

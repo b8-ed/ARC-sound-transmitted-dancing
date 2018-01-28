@@ -367,8 +367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.7, y: 141.1}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 251.9, y: 126}
+  m_SizeDelta: {x: 100.6, y: 100.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42780153
 MonoBehaviour:
@@ -389,7 +389,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b949d911a6e02b4dac7fa895f5eb6be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6950f61a46ced84d97a4bd52eca1fe1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1549,7 +1549,18 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603177539}
+        m_MethodName: OnSliderValueChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &603177538
@@ -1585,11 +1596,11 @@ MonoBehaviour:
   GO_AboutScreen: {fileID: 1667250156}
   GO_ControlsScreen: {fileID: 86717401}
   GO_OptionsScreen: {fileID: 454044380}
-  FX_RecordScratch: {fileID: 8300000, guid: 951967eb327191f47a784597f77b1b5d, type: 3}
+  FX_RecordScratch: {fileID: 8300000, guid: 1809ad229bdf9f844a2ef81440ca5f26, type: 3}
   AC_Songs:
-  - {fileID: 8300000, guid: 4cfb3e05163af014cb58268c909fc93b, type: 3}
-  - {fileID: 8300000, guid: 22f51d83bb10a464dbe429f73ff8aa20, type: 3}
-  - {fileID: 8300000, guid: 420c85756ef22694fa36c2909f23a7a8, type: 3}
+  - {fileID: 8300000, guid: f3b93e17e93022348b0b90ccdf61cf86, type: 3}
+  - {fileID: 8300000, guid: 4338714ec76557146ba179693d4e0774, type: 3}
+  - {fileID: 8300000, guid: dc994bcb9f4d013419824129f490d30b, type: 3}
   sprDisk:
   - {fileID: 21300000, guid: 735711584a030674ab97bd2b7212a6e1, type: 3}
   - {fileID: 21300000, guid: 0eac0390c21458c4c903e72dba4325e2, type: 3}

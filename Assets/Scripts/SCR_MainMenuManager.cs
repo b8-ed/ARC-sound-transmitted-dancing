@@ -37,6 +37,11 @@ public class SCR_MainMenuManager : MonoBehaviour {
         audioSrc.Play();
     }
 
+    public void OnSliderValueChange(float _value)
+    {
+        audioSrc.volume = _value;
+    }
+
     public void OnChangeSongClicked()
     {
         if (!canChangeSong)

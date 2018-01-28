@@ -9,8 +9,8 @@ public class STD_KEventSubscriber : MonoBehaviour {
     public STD_Lights lightManager;
 
     private Koreography koreography; // the koreography to read tracks from
-    public string keyEventID = "STD_Track_Keys";
-    private string lightsEventID = "STD_Track_A";
+    public string keyEventID = "LetterTrack";
+    //private string lightsEventID = "STD_Track_A";
     List<KoreographyEvent> keyEvents; // list of all events within the track for keys
     int keyEventsLength; //el tamanio de la lista para no tener que estarla cargando
     float leadInTimeLeft;
@@ -25,7 +25,7 @@ public class STD_KEventSubscriber : MonoBehaviour {
     private void Start()
     {
         //Para regirstar respuestas a eventos del koreographer
-        Koreographer.Instance.RegisterForEvents(lightsEventID, ChangeLightColor);
+        //Koreographer.Instance.RegisterForEvents(lightsEventID, ChangeLightColor);
         Koreographer.Instance.RegisterForEvents(keyEventID, GenerateKey);
 
         //get the current koreographer

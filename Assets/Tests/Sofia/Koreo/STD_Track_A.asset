@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: STD_Track_A
+  m_EditorClassIdentifier: 
+  mEventID: 
+  mEventList:
+  - mStartSample: 37800
+    mEndSample: 37800
+  - mStartSample: 75600
+    mEndSample: 75600
+  - mStartSample: 113400
+    mEndSample: 113400
+  - mStartSample: 132300
+    mEndSample: 132300
+  - mStartSample: 151200
+    mEndSample: 151200
+  - mStartSample: 189000
+    mEndSample: 189000
+  - mStartSample: 207900
+    mEndSample: 207900
+  - mStartSample: 226800
+    mEndSample: 226800
+  - mStartSample: 245700
+    mEndSample: 245700
+  - mStartSample: 264600
+    mEndSample: 264600
+  - mStartSample: 283500
+    mEndSample: 283500
+  - mStartSample: 302400
+    mEndSample: 302400
+  - mStartSample: 340200
+    mEndSample: 340200
+  - mStartSample: 359100
+    mEndSample: 359100
+  - mStartSample: 378000
+    mEndSample: 378000
+  - mStartSample: 415800
+    mEndSample: 415800
+  - mStartSample: 434700
+    mEndSample: 434700
+  - mStartSample: 453600
+    mEndSample: 453600
+  _SerializedPayloadTypes:
+  - SonicBloom.Koreo.ColorPayload
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads:
+  - mColorVal: {r: 1, g: 0, b: 0, a: 1}
+  - mColorVal: {r: 0.75, g: 0, b: 0, a: 1}
+  - mColorVal: {r: 0.44827592, g: 1, b: 0, a: 1}
+  - mColorVal: {r: 0, g: 1, b: 0.503448, a: 1}
+  - mColorVal: {r: 0.24832658, g: 0.6102941, b: 0, a: 1}
+  - mColorVal: {r: 1, g: 1, b: 1, a: 1}
+  - mColorVal: {r: 0.18143277, g: 0.101967975, b: 0.60294116, a: 1}
+  - mColorVal: {r: 0.6764706, g: 0.16414359, b: 0.61993766, a: 1}
+  - mColorVal: {r: 1, g: 1, b: 1, a: 1}
+  - mColorVal: {r: 1, g: 1, b: 1, a: 1}
+  - mColorVal: {r: 0.9867141, g: 0.03676468, b: 1, a: 1}
+  - mColorVal: {r: 0.65517235, g: 1, b: 0, a: 1}
+  - mColorVal: {r: 0.15862083, g: 1, b: 0, a: 1}
+  - mColorVal: {r: 1, g: 0, b: 0, a: 1}
+  - mColorVal: {r: 1, g: 0, b: 0.88965464, a: 1}
+  - mColorVal: {r: 0.35294116, g: 0.072664365, b: 0.072664365, a: 1}
+  - mColorVal: {r: 0.5441177, g: 0.13602942, b: 0.13602942, a: 1}
+  - mColorVal: {r: 1, g: 1, b: 1, a: 1}
+  _ColorPayloadIdxs: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 

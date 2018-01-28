@@ -481,6 +481,11 @@ Prefab:
       propertyPath: eventDelayInSeconds
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114558280758877212, guid: 61a6a81560c979a428bb0012a577162a,
+        type: 2}
+      propertyPath: keyEventID
+      value: STD_Track_Keys
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61a6a81560c979a428bb0012a577162a, type: 2}
   m_IsPrefabParent: 0

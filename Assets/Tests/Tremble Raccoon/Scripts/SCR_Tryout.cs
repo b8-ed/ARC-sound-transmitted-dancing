@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class SCR_Tryout : MonoBehaviour {
     public Rigidbody[] bone;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private int direction = 1;
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		if(Input.GetKeyDown(KeyCode.Space))
         {
+            direction *= -1;
             int randomNum = Random.Range(0, bone.Length);
-            bone[randomNum].AddForce((Vector3.forward + Vector3.up) * 50);
+            for (int i = 0; i < 4; i++)
+            {
+                if (randomNum + i < bone.Length)
+                    bone[randomNum + i].AddForce(((direction * Vector3.right) + Vector3.up) * 50);
+            }
         }
 	}
 }

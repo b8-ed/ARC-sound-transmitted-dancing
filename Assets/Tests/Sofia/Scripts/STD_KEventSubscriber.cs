@@ -19,6 +19,7 @@ public class STD_KEventSubscriber : MonoBehaviour {
     enum KoreoInts
     {
         _1_GenerateRandomKey = 1,
+        _2_SondEnded,
     }
 
     private void Start()

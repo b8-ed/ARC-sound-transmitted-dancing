@@ -62,9 +62,9 @@ public class SCR_GameManager : MonoBehaviour {
         else if (danceParty.value > 0.75f)
             keyFrequency = 0.8f;
         keyCD = keyFrequency;
-        letter.color = Color.white;
-        key = (char)('A' + Random.Range(0, 4));
-        letter.text = key + "";
+        //letter.color = Color.white;
+       // key = (char)('A' + Random.Range(0, 4));
+       // letter.text = key + "";
         StartCoroutine(ChangeKey());
     }
 

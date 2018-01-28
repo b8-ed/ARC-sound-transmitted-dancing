@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class SCR_DanceDance : MonoBehaviour {
 
     public Rigidbody[] bone;
+    public AudioClip AC_Miss;
+    public AudioClip AC_Good;
 
     private float danceForce = 50;
     public Slider danceMeter;
@@ -14,6 +16,8 @@ public class SCR_DanceDance : MonoBehaviour {
     private float danceVal = 0.05f; //el valor que se suma / resta al slider en caso de atinar/fallar la tecla
     private int direction = 1;
     private float danceMeterValue;
+    private AudioSource auSCr;
+    private bool isPlayingSound;
 
     public STD_Puns[] puns;
 
@@ -26,6 +30,7 @@ public class SCR_DanceDance : MonoBehaviour {
 
     private void Start()
     {
+        auSCr = GetComponent<AudioSource>();
         if(danceMeter == null)
         danceMeter = FindObjectOfType<Slider>();
         gameManager = FindObjectOfType<SCR_GameManager>();
@@ -55,8 +60,22 @@ public class SCR_DanceDance : MonoBehaviour {
     }
     public void Miss()
     {
-         danceMeterValue -= (danceVal / 2);
+        auSCr.clip = AC_Miss;
+
+        //if(!isPlayingSound)
+        //    StartCoroutine(WaitTillEnds());
+
+        danceMeterValue -= (danceVal / 2);
          //gameManager.letter.color = Color.red;
+    }
+
+    IEnumerator WaitTillEnds()
+    {
+        isPlayingSound = true;
+        auSCr.Play();
+        yield return auSCr.isPlaying;
+
+        isPlayingSound = false;
     }
 
     void Idle()
@@ -104,5 +123,8 @@ public class SCR_DanceDance : MonoBehaviour {
             if (randomNum + i < bone.Length)
                 bone[randomNum + i].AddForce(((direction * Vector3.right) + mayTheForceBeWithYou) * danceForce);
         }
+
+        auSCr.clip = AC_Good;
+        //StartCoroutine(WaitTillEnds());
     }
 }

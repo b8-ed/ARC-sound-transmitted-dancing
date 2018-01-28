@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadedKoreography:
-  - {fileID: 11400000, guid: a8ebd36ce25d67947912fb13368ada8e, type: 2}
-  eventDelayInSeconds: 0
+  - {fileID: 11400000, guid: 94114d78f47f3a04fa91f2d36608940c, type: 2}
+  eventDelayInSeconds: 3
 --- !u!114 &114213855074625410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlayOnAwake: 1
-  koreography: {fileID: 11400000, guid: a8ebd36ce25d67947912fb13368ada8e, type: 2}
+  koreography: {fileID: 11400000, guid: 94114d78f47f3a04fa91f2d36608940c, type: 2}
   targetKoreographer: {fileID: 0}
 --- !u!114 &114558280758877212
 MonoBehaviour:
@@ -162,5 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1545406c9e0690e41803d0c6d2cf4406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeMat: {fileID: 0}
   keyManager: {fileID: 0}
+  lightManager: {fileID: 0}
+  keyEventID: LetterTrack

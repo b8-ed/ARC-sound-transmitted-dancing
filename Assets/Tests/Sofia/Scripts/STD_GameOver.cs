@@ -10,12 +10,16 @@ public class STD_GameOver : MonoBehaviour {
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+        lastSceneName = "";
     }
 
     public void Retry()
     {
         if(!string.IsNullOrEmpty(lastSceneName))
+        {
             SceneManager.LoadScene(lastSceneName);
+        }
+            
     }
     
 

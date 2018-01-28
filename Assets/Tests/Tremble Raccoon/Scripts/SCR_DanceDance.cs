@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class SCR_DanceDance : MonoBehaviour {
 
     public Rigidbody[] bone;
@@ -56,7 +57,20 @@ public class SCR_DanceDance : MonoBehaviour {
     public void Miss()
     {
          danceMeterValue -= (danceVal / 2);
+        if (danceMeterValue <= 0)
+            StartCoroutine(WaitToLoose());
          //gameManager.letter.color = Color.red;
+    }
+
+    IEnumerator WaitToLoose()
+    {
+        yield return new WaitForSeconds(2);
+        if(danceMeterValue <= 0)
+        {
+            //loose
+            STD_GameOver.lastSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene("Game Over");
+        }
     }
 
     void Idle()

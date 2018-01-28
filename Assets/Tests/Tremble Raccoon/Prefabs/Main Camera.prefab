@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 81455024105960608}
   - component: {fileID: 114951676363924566}
   - component: {fileID: 114769096180560762}
+  - component: {fileID: 114588942852207602}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -37,13 +38,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401681071244924}
-  m_LocalRotation: {x: 0.69933486, y: -0, z: -0, w: 0.7147942}
-  m_LocalPosition: {x: -5.015, y: 4.229, z: -4.64}
+  m_LocalRotation: {x: -0, y: 0.00000034272668, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 1.09, z: -5.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 88.747, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20693151105633312
 Camera:
   m_ObjectHideFlags: 1
@@ -62,7 +63,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 37.3
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -87,6 +88,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401681071244924}
   m_Enabled: 1
+--- !u!114 &114588942852207602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401681071244924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a5b26aa382644aa77836c72549ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bone: []
+  danceMeter: {fileID: 0}
+  puns:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114769096180560762
 MonoBehaviour:
   m_ObjectHideFlags: 1

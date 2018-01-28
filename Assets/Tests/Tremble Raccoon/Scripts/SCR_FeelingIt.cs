@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class SCR_FeelingIt : MonoBehaviour {
 
-    public Rigidbody chest;
     [HideInInspector]
     public Transform boredPosition;
     [HideInInspector]
@@ -21,7 +20,6 @@ public class SCR_FeelingIt : MonoBehaviour {
     {
         navMesh = GetComponent<NavMeshAgent>();
         danceMeter = FindObjectOfType<Slider>();
-        StartCoroutine(Rythm());
         transform.LookAt(GameObject.Find("K-Lmao").transform);
     }
 
@@ -34,12 +32,5 @@ public class SCR_FeelingIt : MonoBehaviour {
         }
         else
             navMesh.SetDestination(boredPosition.position);
-    }
-
-    IEnumerator Rythm()
-    {
-        yield return new WaitForSeconds(0.5f);
-        chest.AddForce(Vector3.up * 1000);
-        StartCoroutine(Rythm());
     }
 }

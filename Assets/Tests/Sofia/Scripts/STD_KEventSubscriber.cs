@@ -13,6 +13,7 @@ public class STD_KEventSubscriber : MonoBehaviour {
     private string lightsEventID = "STD_Track_A";
     List<KoreographyEvent> keyEvents; // list of all events within the track for keys
     int keyEventsLength; //el tamanio de la lista para no tener que estarla cargando
+    float leadInTimeLeft;
 
     //enum to know what koreographe int payloads mean
     enum KoreoInts
@@ -33,6 +34,7 @@ public class STD_KEventSubscriber : MonoBehaviour {
         KoreographyTrackBase keyTrack = koreography.GetTrackByID(keyEventID);
         keyEvents = keyTrack.GetAllEvents();
         keyEventsLength = keyEvents.Count;
+        keyManager.SetAllSongKeys(keyEventsLength);
     }
 
     //Cambia el color de un material

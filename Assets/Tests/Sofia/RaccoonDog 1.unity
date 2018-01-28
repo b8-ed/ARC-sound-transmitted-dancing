@@ -1353,6 +1353,7 @@ MonoBehaviour:
   boredPosition: {fileID: 1525824362}
   dancingPosition: {fileID: 1284187215}
   myChanceToShine: 1
+  danceMeter: {fileID: 730891870}
 --- !u!4 &127705190 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -1948,6 +1949,7 @@ MonoBehaviour:
   boredPosition: {fileID: 103121272}
   dancingPosition: {fileID: 2022420726}
   myChanceToShine: 0.6
+  danceMeter: {fileID: 730891870}
 --- !u!4 &279200010 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -2491,6 +2493,7 @@ MonoBehaviour:
   boredPosition: {fileID: 0}
   dancingPosition: {fileID: 0}
   myChanceToShine: 0
+  danceMeter: {fileID: 730891870}
 --- !u!4 &382434679 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -2851,6 +2854,7 @@ MonoBehaviour:
   - {fileID: 1143711811}
   - {fileID: 2068881080}
   - {fileID: 1418649172}
+  puns: []
 --- !u!1 &445024613 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100060, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -3208,6 +3212,23 @@ Prefab:
       propertyPath: lightManager
       value: 
       objectReference: {fileID: 1600925100}
+    - target: {fileID: 114558280758877212, guid: 61a6a81560c979a428bb0012a577162a,
+        type: 2}
+      propertyPath: keyEventID
+      value: LetterTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114213855074625410, guid: 61a6a81560c979a428bb0012a577162a,
+        type: 2}
+      propertyPath: koreography
+      value: 
+      objectReference: {fileID: 11400000, guid: 94114d78f47f3a04fa91f2d36608940c,
+        type: 2}
+    - target: {fileID: 114052455993392572, guid: 61a6a81560c979a428bb0012a577162a,
+        type: 2}
+      propertyPath: loadedKoreography.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 94114d78f47f3a04fa91f2d36608940c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61a6a81560c979a428bb0012a577162a, type: 2}
   m_IsPrefabParent: 0
@@ -4956,6 +4977,7 @@ MonoBehaviour:
   boredPosition: {fileID: 1471982425}
   dancingPosition: {fileID: 1484648803}
   myChanceToShine: 0.3
+  danceMeter: {fileID: 730891870}
 --- !u!4 &871916881 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -5907,6 +5929,7 @@ MonoBehaviour:
   boredPosition: {fileID: 556113946}
   dancingPosition: {fileID: 882465064}
   myChanceToShine: 0.8
+  danceMeter: {fileID: 730891870}
 --- !u!4 &1101338195 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -7554,6 +7577,7 @@ MonoBehaviour:
   boredPosition: {fileID: 0}
   dancingPosition: {fileID: 0}
   myChanceToShine: 0
+  danceMeter: {fileID: 730891870}
 --- !u!195 &1296848062
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10273,6 +10297,7 @@ MonoBehaviour:
   boredPosition: {fileID: 4025727}
   dancingPosition: {fileID: 1783101260}
   myChanceToShine: 0.9
+  danceMeter: {fileID: 730891870}
 --- !u!4 &1777340488 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -10344,6 +10369,7 @@ MonoBehaviour:
   boredPosition: {fileID: 1173884131}
   dancingPosition: {fileID: 1615921329}
   myChanceToShine: 0.4
+  danceMeter: {fileID: 730891870}
 --- !u!4 &1801024338 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -10609,6 +10635,7 @@ MonoBehaviour:
   boredPosition: {fileID: 1604621400}
   dancingPosition: {fileID: 168611144}
   myChanceToShine: 0.7
+  danceMeter: {fileID: 730891870}
 --- !u!4 &1834694109 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -10728,6 +10755,7 @@ MonoBehaviour:
   boredPosition: {fileID: 66487712}
   dancingPosition: {fileID: 1878787668}
   myChanceToShine: 0.5
+  danceMeter: {fileID: 730891870}
 --- !u!4 &1865206588 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}

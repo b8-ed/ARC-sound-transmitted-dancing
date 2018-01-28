@@ -53,4 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyDisplay: {fileID: 0}
   keyTimeSlider: {fileID: 0}
-  possibleKeys: 61000000770000007300000064000000
+  possibleKeys: 610000007700000073000000640000007100000065000000
+  txtPrev0: {fileID: 0}
+  txtPrev1: {fileID: 0}
+  dance: {fileID: 0}

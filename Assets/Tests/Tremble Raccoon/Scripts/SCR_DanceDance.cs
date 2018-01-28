@@ -77,7 +77,8 @@ public class SCR_DanceDance : MonoBehaviour {
         else
             mayTheForceBeWithYou = -Vector3.forward;
         //Move it move it
-        bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
+        if(bone.Length > 0)
+            bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
         danceMeter.value += danceVal;       
         gameManager.letter.color = Color.green;
     }

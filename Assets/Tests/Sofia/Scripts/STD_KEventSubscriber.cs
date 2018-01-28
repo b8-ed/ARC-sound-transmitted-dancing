@@ -9,7 +9,7 @@ public class STD_KEventSubscriber : MonoBehaviour {
     public STD_Lights lightManager;
 
     private Koreography koreography; // the koreography to read tracks from
-    private string keyEventID = "STD_Track_Keys";
+    public string keyEventID = "STD_Track_Keys";
     private string lightsEventID = "STD_Track_A";
     List<KoreographyEvent> keyEvents; // list of all events within the track for keys
     int keyEventsLength; //el tamanio de la lista para no tener que estarla cargando
@@ -42,13 +42,13 @@ public class STD_KEventSubscriber : MonoBehaviour {
     {
         if (koreoEvent.HasColorPayload())
         {
-            lightManager.ChangeLightColors(koreoEvent.GetColorValue());
+            lightManager.ChangeLightColors();
         }
     }
 
     public void GenerateKey(KoreographyEvent koreographyEvent)
     {
-        lightManager.ChangeLightColors(Random.ColorHSV()); // asignar un color random por ahorita
+        lightManager.ChangeLightColors(); // asignar un color random por ahorita
         if (koreographyEvent.HasIntPayload())
         {
             if (koreographyEvent.GetIntValue() == (int)KoreoInts._1_GenerateRandomKey)

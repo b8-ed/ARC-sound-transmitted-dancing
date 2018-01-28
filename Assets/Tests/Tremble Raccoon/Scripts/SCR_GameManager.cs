@@ -70,11 +70,11 @@ public class SCR_GameManager : MonoBehaviour {
 
     void KeyCoolDown()
     {
-        keyCD -= Time.deltaTime;
-        float newFillAmount = ((keyCD * 100) / keyFrequency) * 0.01f;
-        keyCDSprite.fillAmount = Mathf.Lerp(keyCDSprite.fillAmount, newFillAmount, Time.deltaTime * 100);
+        //keyCD -= Time.deltaTime;
+        //float newFillAmount = ((keyCD * 100) / keyFrequency) * 0.01f;
+        //keyCDSprite.fillAmount = Mathf.Lerp(keyCDSprite.fillAmount, newFillAmount, Time.deltaTime * 100);
 
-        if (start)
-            keyCDSprite.enabled = true;
+        //if (start)
+        //    keyCDSprite.enabled = true;
     }
 }

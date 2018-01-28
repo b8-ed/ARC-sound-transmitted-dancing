@@ -27,7 +27,8 @@ public class SCR_DanceDance : MonoBehaviour {
         keysManager = FindObjectOfType<STD_Keys>(); 
         danceMeter.value = 0.2f;
     }
-
+    
+    //Esto ahora se hace desde STD Keys al recibir los eventos
     //private void Update()
     //{
     //    if (!SCR_GameManager.start)

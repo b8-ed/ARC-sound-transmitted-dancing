@@ -4,12 +4,13 @@ using UnityEngine;
 using SonicBloom.Koreo;
 
 public class STD_KEventSubscriber : MonoBehaviour {
-
-    //public Renderer cubeMat;
+    
     public STD_Keys keyManager;
+    public STD_Lights lightManager;
 
     private Koreography koreography; // the koreography to read tracks from
     private string keyEventID = "STD_Track_Keys";
+    private string lightsEventID = "STD_Track_A";
     List<KoreographyEvent> keyEvents; // list of all events within the track for keys
     int keyEventsLength; //el tamanio de la lista para no tener que estarla cargando
 
@@ -22,7 +23,7 @@ public class STD_KEventSubscriber : MonoBehaviour {
     private void Start()
     {
         //Para regirstar respuestas a eventos del koreographer
-        //Koreographer.Instance.RegisterForEvents("STD_Track_A", ChangeLightColor);
+        Koreographer.Instance.RegisterForEvents(lightsEventID, ChangeLightColor);
         Koreographer.Instance.RegisterForEvents(keyEventID, GenerateKey);
 
         //get the current koreographer
@@ -37,17 +38,18 @@ public class STD_KEventSubscriber : MonoBehaviour {
     //Cambia el color de un material
     public void ChangeLightColor(KoreographyEvent koreoEvent)
     {
-        //if(koreoEvent.HasColorPayload())
-        //{
-        //    cubeMat.material.color = koreoEvent.GetColorValue();
-        //}
+        if (koreoEvent.HasColorPayload())
+        {
+            lightManager.ChangeLightColors(koreoEvent.GetColorValue());
+        }
     }
 
     public void GenerateKey(KoreographyEvent koreographyEvent)
     {
-        if(koreographyEvent.HasIntPayload())
+        lightManager.ChangeLightColors(Random.ColorHSV()); // asignar un color random por ahorita
+        if (koreographyEvent.HasIntPayload())
         {
-            if(koreographyEvent.GetIntValue() == (int)KoreoInts._1_GenerateRandomKey)
+            if (koreographyEvent.GetIntValue() == (int)KoreoInts._1_GenerateRandomKey)
             {
                 if (keyEvents.Contains(koreographyEvent))
                 {

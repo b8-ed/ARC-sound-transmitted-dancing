@@ -2854,7 +2854,6 @@ MonoBehaviour:
   - {fileID: 1143711811}
   - {fileID: 2068881080}
   - {fileID: 1418649172}
-  danceForce: 400
 --- !u!1 &445024613 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100060, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}
@@ -7248,9 +7247,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePosition: {fileID: 1433029065}
   finalCountDown: {fileID: 655691887}
-  letter: {fileID: 1890386850}
   danceParty: {fileID: 730891870}
   keyFrequency: 1
+  letter: {fileID: 1890386850}
+  keyCDSprite: {fileID: 0}
+  keyCD: 0
 --- !u!1 &1296848058 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100138, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}

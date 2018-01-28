@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: f43900f5b4982a44b8698d5d3f094e19
+timeCreated: 1517082504
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Cabeza
+    100002: Cara
+    100004: //RootNode
+    100006: Ojo_De
+    100008: Ojo_Iz
+    100010: Parpado_De
+    100012: Parpado_Iz
+    100014: Tentaculo  10
+    100016: Tentaculo  8
+    100018: Tentaculo  9
+    100020: Tentaculo 1
+    100022: Tentaculo 2
+    100024: Tentaculo 3
+    100026: Tentaculo 4
+    100028: Tentaculo 5
+    100030: Tentaculo 6
+    100032: Tentaculo 7
+    400000: Cabeza
+    400002: Cara
+    400004: //RootNode
+    400006: Ojo_De
+    400008: Ojo_Iz
+    400010: Parpado_De
+    400012: Parpado_Iz
+    400014: Tentaculo  10
+    400016: Tentaculo  8
+    400018: Tentaculo  9
+    400020: Tentaculo 1
+    400022: Tentaculo 2
+    400024: Tentaculo 3
+    400026: Tentaculo 4
+    400028: Tentaculo 5
+    400030: Tentaculo 6
+    400032: Tentaculo 7
+    2100000: 'Material #35'
+    2100002: 'Material #29'
+    2100004: 'Material #37'
+    2100006: 'Material #36'
+    2100008: 'Material #26'
+    2300000: Cabeza
+    2300002: Cara
+    2300004: Ojo_De
+    2300006: Ojo_Iz
+    2300008: Parpado_De
+    2300010: Parpado_Iz
+    2300012: Tentaculo  10
+    2300014: Tentaculo  8
+    2300016: Tentaculo  9
+    2300018: Tentaculo 1
+    2300020: Tentaculo 2
+    2300022: Tentaculo 3
+    2300024: Tentaculo 4
+    2300026: Tentaculo 5
+    2300028: Tentaculo 6
+    2300030: Tentaculo 7
+    3300000: Cabeza
+    3300002: Cara
+    3300004: Ojo_De
+    3300006: Ojo_Iz
+    3300008: Parpado_De
+    3300010: Parpado_Iz
+    3300012: Tentaculo  10
+    3300014: Tentaculo  8
+    3300016: Tentaculo  9
+    3300018: Tentaculo 1
+    3300020: Tentaculo 2
+    3300022: Tentaculo 3
+    3300024: Tentaculo 4
+    3300026: Tentaculo 5
+    3300028: Tentaculo 6
+    3300030: Tentaculo 7
+    4300000: Cara
+    4300002: Ojo_De
+    4300004: Ojo_Iz
+    4300006: Parpado_Iz
+    4300008: Parpado_De
+    4300010: Cabeza
+    4300012: Tentaculo 1
+    4300014: Tentaculo  8
+    4300016: Tentaculo 2
+    4300018: Tentaculo 7
+    4300020: Tentaculo 3
+    4300022: Tentaculo 6
+    4300024: Tentaculo 4
+    4300026: Tentaculo 5
+    4300028: Tentaculo  10
+    4300030: Tentaculo  9
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,6 +13,8 @@ public class SCR_DanceDance : MonoBehaviour {
     private STD_Keys keysManager;//para seguir los inputs del koreographer
     private float danceVal = 0.1f; //el valor que se suma / resta al slider en caso de atinar/fallar la tecla
 
+    public STD_Puns[] puns;
+
     private enum DanceDirection
     {
         UP,
@@ -47,7 +49,7 @@ public class SCR_DanceDance : MonoBehaviour {
     public void Miss()
     {
          danceMeter.value -= danceVal;
-         gameManager.letter.color = Color.red;
+         //gameManager.letter.color = Color.red;
     }
 
     void Idle()
@@ -62,6 +64,13 @@ public class SCR_DanceDance : MonoBehaviour {
 
     public void Dance()
     {
+        //mostrar random pun
+        int randPun = Random.Range(0, puns.Length + 5);
+        if(randPun < puns.Length)
+        {
+            puns[randPun].DisplayPun();
+        }
+
         //Reset Idle Timer
         idleTimer = 0.5f;
         //Get a random bone
@@ -77,8 +86,8 @@ public class SCR_DanceDance : MonoBehaviour {
         else
             mayTheForceBeWithYou = -Vector3.forward;
         //Move it move it
-        bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
+        if(bone.Length > 0)
+            bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
         danceMeter.value += danceVal;       
-        gameManager.letter.color = Color.green;
     }
 }

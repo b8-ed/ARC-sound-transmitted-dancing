@@ -62,19 +62,19 @@ public class SCR_GameManager : MonoBehaviour {
         else if (danceParty.value > 0.75f)
             keyFrequency = 0.8f;
         keyCD = keyFrequency;
-        letter.color = Color.white;
-        key = (char)('A' + Random.Range(0, 4));
-        letter.text = key + "";
+        //letter.color = Color.white;
+       // key = (char)('A' + Random.Range(0, 4));
+       // letter.text = key + "";
         StartCoroutine(ChangeKey());
     }
 
     void KeyCoolDown()
     {
-        keyCD -= Time.deltaTime;
-        float newFillAmount = ((keyCD * 100) / keyFrequency) * 0.01f;
-        keyCDSprite.fillAmount = Mathf.Lerp(keyCDSprite.fillAmount, newFillAmount, Time.deltaTime * 100);
+        //keyCD -= Time.deltaTime;
+        //float newFillAmount = ((keyCD * 100) / keyFrequency) * 0.01f;
+        //keyCDSprite.fillAmount = Mathf.Lerp(keyCDSprite.fillAmount, newFillAmount, Time.deltaTime * 100);
 
-        if (start)
-            keyCDSprite.enabled = true;
+        //if (start)
+        //    keyCDSprite.enabled = true;
     }
 }

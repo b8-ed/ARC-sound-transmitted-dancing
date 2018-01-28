@@ -31,6 +31,9 @@ public class STD_Keys : MonoBehaviour {
         HideUI();
         if (dance == null)
             dance = FindObjectOfType<SCR_DanceDance>();
+
+        txtPrev0.transform.parent.gameObject.SetActive(false);
+        txtPrev1.transform.parent.gameObject.SetActive(false);
     }
 
     public KeyCode GetCurrentKey()
@@ -65,13 +68,23 @@ public class STD_Keys : MonoBehaviour {
             if (currentEventIndex + 1 < allSongsCount)
             {
                 txtPrev0.text = allSongKeys[currentEventIndex + 1].ToString();
+                txtPrev0.transform.parent.gameObject.SetActive(true);
             }
             else
+            {
                 txtPrev0.text = "";
+                txtPrev0.transform.parent.gameObject.SetActive(false);
+            }
             if (currentEventIndex + 2 < allSongsCount)
+            {
                 txtPrev1.text = allSongKeys[currentEventIndex + 2].ToString();
+                txtPrev1.transform.parent.gameObject.SetActive(true);
+            }
             else
+            {
                 txtPrev1.text = "";
+                txtPrev1.transform.parent.gameObject.SetActive(false);
+            }
             currentEventIndex++;        //aumentar el index para el siguiente evento
         }
     }

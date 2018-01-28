@@ -14,12 +14,12 @@ public class SCR_FeelingIt : MonoBehaviour {
     public float myChanceToShine;
 
     private NavMeshAgent navMesh;
-    private Slider danceMeter;
+    public Slider danceMeter;
 
     private void Start()
     {
         navMesh = GetComponent<NavMeshAgent>();
-        danceMeter = FindObjectOfType<Slider>();
+       // danceMeter = FindObjectOfType<Slider>();
         transform.LookAt(GameObject.Find("K-Lmao").transform);
     }
 

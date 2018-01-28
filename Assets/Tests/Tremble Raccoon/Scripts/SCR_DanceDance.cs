@@ -6,12 +6,14 @@ public class SCR_DanceDance : MonoBehaviour {
 
     public Rigidbody[] bone;
 
-    private float danceForce = 600;
+    private float danceForce = 50;
     public Slider danceMeter;
     private SCR_GameManager gameManager;
     private float idleTimer = 0.5f;
     private STD_Keys keysManager;//para seguir los inputs del koreographer
-    private float danceVal = 0.1f; //el valor que se suma / resta al slider en caso de atinar/fallar la tecla
+    private float danceVal = 0.05f; //el valor que se suma / resta al slider en caso de atinar/fallar la tecla
+    private int direction = 1;
+    private float danceMeterValue;
 
     public STD_Puns[] puns;
 
@@ -28,9 +30,9 @@ public class SCR_DanceDance : MonoBehaviour {
         danceMeter = FindObjectOfType<Slider>();
         gameManager = FindObjectOfType<SCR_GameManager>();
         keysManager = FindObjectOfType<STD_Keys>(); 
-        danceMeter.value = 0.2f;
+        danceMeterValue = 0.2f;
     }
-    
+
     //Esto ahora se hace desde STD Keys al recibir los eventos
     //private void Update()
     //{
@@ -46,10 +48,14 @@ public class SCR_DanceDance : MonoBehaviour {
     //    //}
     //    //Idle();
     //}
-
+    private void Update()
+    {
+        danceMeterValue = Mathf.Clamp01(danceMeterValue);
+        danceMeter.value = Mathf.Lerp(danceMeter.value, danceMeterValue, Time.deltaTime);
+    }
     public void Miss()
     {
-         danceMeter.value -= danceVal;
+         danceMeterValue -= (danceVal / 2);
          //gameManager.letter.color = Color.red;
     }
 
@@ -59,7 +65,7 @@ public class SCR_DanceDance : MonoBehaviour {
             if (idleTimer < 0)
             {
                 gameManager.letter.color = Color.yellow;
-                danceMeter.value -= 0.001f;
+                danceMeterValue -= 0.001f;
             }
     }
 
@@ -87,8 +93,16 @@ public class SCR_DanceDance : MonoBehaviour {
         else
             mayTheForceBeWithYou = -Vector3.forward;
         //Move it move it
-        if(bone.Length > 0)
-            bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
-        danceMeter.value += danceVal;       
+        //if(bone.Length > 0)
+        //    bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
+        danceMeterValue += danceVal;
+
+        direction *= -1;
+        int randomNum = Random.Range(0, bone.Length);
+        for (int i = 0; i < 4; i++)
+        {
+            if (randomNum + i < bone.Length)
+                bone[randomNum + i].AddForce(((direction * Vector3.right) + mayTheForceBeWithYou) * danceForce);
+        }
     }
 }

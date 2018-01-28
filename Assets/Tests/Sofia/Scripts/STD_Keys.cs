@@ -140,11 +140,20 @@ public class STD_Keys : MonoBehaviour {
         //Check if current key is pressed
         if(Input.GetKeyDown(currentKey) && currentKey != KeyCode.None)
         {
+            if (wasCurrentKeyPressed)
+            {
+                dance.Miss();
+                return;
+            }
             wasCurrentKeyPressed = true;
             currentKey = KeyCode.None;
             dance.Dance(); //Aumentar su valor de baile / aka win
             HideUI(); //hide slider
             Debug.Log("current key pressed!" + currentKey);
+        }
+        else if(Input.anyKey && currentKey != KeyCode.None)
+        {
+            dance.Miss();
         }
     }
 

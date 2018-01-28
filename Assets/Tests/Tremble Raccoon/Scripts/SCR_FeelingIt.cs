@@ -27,8 +27,12 @@ public class SCR_FeelingIt : MonoBehaviour {
     {
         if (danceMeter.value >= myChanceToShine)
         {
+            Vector3 klmaoPosition = GameObject.Find("K-Lmao").transform.position;
             navMesh.SetDestination(dancingPosition.position);
-            transform.LookAt(GameObject.Find("K-Lmao").transform);
+
+            Vector3 playerPos = klmaoPosition - transform.position;
+            Quaternion playerRotation = Quaternion.LookRotation(playerPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, playerRotation, Time.deltaTime * 5);
         }
         else
             navMesh.SetDestination(boredPosition.position);

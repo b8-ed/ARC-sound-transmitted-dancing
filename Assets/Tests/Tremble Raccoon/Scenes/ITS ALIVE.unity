@@ -859,6 +859,7 @@ MonoBehaviour:
   - {fileID: 1143711811}
   - {fileID: 2068881080}
   - {fileID: 1418649172}
+  puns: []
 --- !u!1 &486721857 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: ebbf28cbf0ee19442a0853aa896e6170, type: 3}

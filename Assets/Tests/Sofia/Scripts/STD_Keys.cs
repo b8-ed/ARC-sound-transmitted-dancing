@@ -45,7 +45,6 @@ public class STD_Keys : MonoBehaviour {
         {
             int indexRandKey = Random.Range(0, possibleKeys.Length);
             allSongKeys.Add(possibleKeys[indexRandKey]);
-            print(i + " " + possibleKeys[indexRandKey]);
         }
         allSongsCount = eventCount;
     }
@@ -81,7 +80,7 @@ public class STD_Keys : MonoBehaviour {
     //y asigna los valores al slider
     private void SetTime(float currentEventTime, float nextEventTime, int sampleRate, bool isLastEvent)
     {
-        Debug.Log("TIME: " + (nextEventTime - currentEventTime) + " Sample Rate: " + sampleRate);
+        //Debug.Log("TIME: " + (nextEventTime - currentEventTime) + " Sample Rate: " + sampleRate);
         if (!isLastEvent)
             timeToPressKey = ((nextEventTime - currentEventTime)) / 100000;     //formula para sacar el tiempo a partir de sample location
         else

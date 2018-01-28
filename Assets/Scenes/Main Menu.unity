@@ -1591,7 +1591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f73ab2a10e6f54b9cf412aa74b302c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
   GO_MainMenu: {fileID: 1500667188}
   GO_AboutScreen: {fileID: 1667250156}
   GO_ControlsScreen: {fileID: 86717401}

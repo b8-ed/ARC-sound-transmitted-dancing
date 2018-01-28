@@ -1563,45 +1563,45 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114015465692708130, guid: 13a49bed2a0edf347a6709a92710e046,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114015465692708130, guid: 13a49bed2a0edf347a6709a92710e046,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114875009860805530, guid: 13a49bed2a0edf347a6709a92710e046,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114875009860805530, guid: 13a49bed2a0edf347a6709a92710e046,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114794974398427228, guid: 13a49bed2a0edf347a6709a92710e046,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114794974398427228, guid: 13a49bed2a0edf347a6709a92710e046,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114687606736137054, guid: 13a49bed2a0edf347a6709a92710e046,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114687606736137054, guid: 13a49bed2a0edf347a6709a92710e046,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114015465692708130, guid: 13a49bed2a0edf347a6709a92710e046,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114015465692708130, guid: 13a49bed2a0edf347a6709a92710e046,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13a49bed2a0edf347a6709a92710e046, type: 2}

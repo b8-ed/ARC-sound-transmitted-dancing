@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 5f4e2c9368e201e4aa1f6c6bb26abbfc
+timeCreated: 1517147961
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Eslabon
+    100002: Letrero
+    100004: //RootNode
+    100006: Pez_Angel01
+    100008: Pez_Angel02
+    100010: Pez_Tortuga
+    100012: Prop_Caracol01
+    100014: Prop_Coral_Cilindro01
+    100016: Prop_Coral_Cilindro02
+    100018: Prop_Coral_Cilindro03
+    100020: Prop_Coral_Hoja01
+    100022: Prop_Coral_Hoja02
+    100024: Prop_Coral_Hoja03
+    100026: Prop_Coral_Hoja04
+    100028: Prop_Coral_Paraguas01
+    100030: Prop_Coral_Paraguas02
+    100032: Prop_Coral_Paraguas03
+    100034: Ref_Pez Angel01
+    100036: Ref_Pez Angel02
+    100038: Ref_Pez Tortuga
+    400000: Eslabon
+    400002: Letrero
+    400004: //RootNode
+    400006: Pez_Angel01
+    400008: Pez_Angel02
+    400010: Pez_Tortuga
+    400012: Prop_Caracol01
+    400014: Prop_Coral_Cilindro01
+    400016: Prop_Coral_Cilindro02
+    400018: Prop_Coral_Cilindro03
+    400020: Prop_Coral_Hoja01
+    400022: Prop_Coral_Hoja02
+    400024: Prop_Coral_Hoja03
+    400026: Prop_Coral_Hoja04
+    400028: Prop_Coral_Paraguas01
+    400030: Prop_Coral_Paraguas02
+    400032: Prop_Coral_Paraguas03
+    400034: Ref_Pez Angel01
+    400036: Ref_Pez Angel02
+    400038: Ref_Pez Tortuga
+    2100000: No Name
+    2100002: 'Material #2'
+    2100004: 'Material #3'
+    2100006: 'Material #4'
+    2300000: Eslabon
+    2300002: Letrero
+    2300004: Pez_Angel01
+    2300006: Pez_Angel02
+    2300008: Pez_Tortuga
+    2300010: Prop_Caracol01
+    2300012: Prop_Coral_Cilindro01
+    2300014: Prop_Coral_Cilindro02
+    2300016: Prop_Coral_Cilindro03
+    2300018: Prop_Coral_Hoja01
+    2300020: Prop_Coral_Hoja02
+    2300022: Prop_Coral_Hoja03
+    2300024: Prop_Coral_Hoja04
+    2300026: Prop_Coral_Paraguas01
+    2300028: Prop_Coral_Paraguas02
+    2300030: Prop_Coral_Paraguas03
+    2300032: Ref_Pez Angel01
+    2300034: Ref_Pez Angel02
+    2300036: Ref_Pez Tortuga
+    3300000: Eslabon
+    3300002: Letrero
+    3300004: Pez_Angel01
+    3300006: Pez_Angel02
+    3300008: Pez_Tortuga
+    3300010: Prop_Caracol01
+    3300012: Prop_Coral_Cilindro01
+    3300014: Prop_Coral_Cilindro02
+    3300016: Prop_Coral_Cilindro03
+    3300018: Prop_Coral_Hoja01
+    3300020: Prop_Coral_Hoja02
+    3300022: Prop_Coral_Hoja03
+    3300024: Prop_Coral_Hoja04
+    3300026: Prop_Coral_Paraguas01
+    3300028: Prop_Coral_Paraguas02
+    3300030: Prop_Coral_Paraguas03
+    3300032: Ref_Pez Angel01
+    3300034: Ref_Pez Angel02
+    3300036: Ref_Pez Tortuga
+    4300000: Prop_Coral_Cilindro02
+    4300002: Prop_Coral_Cilindro01
+    4300004: Prop_Coral_Cilindro03
+    4300006: Prop_Coral_Paraguas01
+    4300008: Prop_Coral_Paraguas02
+    4300010: Prop_Coral_Paraguas03
+    4300012: Prop_Coral_Hoja01
+    4300014: Prop_Coral_Hoja02
+    4300016: Prop_Coral_Hoja03
+    4300018: Prop_Coral_Hoja04
+    4300020: Prop_Caracol01
+    4300022: Ref_Pez Angel01
+    4300024: Pez_Angel01
+    4300026: Ref_Pez Angel02
+    4300028: Pez_Angel02
+    4300030: Ref_Pez Tortuga
+    4300032: Pez_Tortuga
+    4300034: Letrero
+    4300036: Eslabon
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

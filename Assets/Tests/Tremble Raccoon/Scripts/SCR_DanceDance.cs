@@ -10,6 +10,9 @@ public class SCR_DanceDance : MonoBehaviour {
     private Slider danceMeter;
     private SCR_GameManager gameManager;
     private float idleTimer = 0.5f;
+    private STD_Keys keysManager;//para seguir los inputs del koreographer
+    private float danceVal = 0.1f; //el valor que se suma / resta al slider en caso de atinar/fallar la tecla
+
     private enum DanceDirection
     {
         UP,
@@ -21,26 +24,28 @@ public class SCR_DanceDance : MonoBehaviour {
     {
         danceMeter = FindObjectOfType<Slider>();
         gameManager = FindObjectOfType<SCR_GameManager>();
+        keysManager = FindObjectOfType<STD_Keys>(); 
         danceMeter.value = 0.2f;
     }
 
-    private void Update()
-    {
-        if (!SCR_GameManager.start)
-            return;
-        if (Input.anyKeyDown)
-        {
-            if (Input.anyKeyDown == Input.GetKeyDown((SCR_GameManager.key + "").ToLower()))
-                Dance();
-            else
-                Miss();
-        }
-        Idle();
-    }
+    //private void Update()
+    //{
+    //    if (!SCR_GameManager.start)
+    //        return;
+    //    //esto se va a hacer desde std_keys
+    //    //if (Input.anyKeyDown)
+    //    //{
+    //    //    if (Input.anyKeyDown == Input.GetKeyDown(keysManager.GetCurrentKey()) && keysManager.GetCurrentKey() != KeyCode.None)
+    //    //        Dance();
+    //    //    else
+    //    //        Miss();
+    //    //}
+    //    //Idle();
+    //}
 
-    void Miss()
+    public void Miss()
     {
-         danceMeter.value -= 0.1f;
+         danceMeter.value -= danceVal;
          gameManager.letter.color = Color.red;
     }
 
@@ -72,7 +77,7 @@ public class SCR_DanceDance : MonoBehaviour {
             mayTheForceBeWithYou = -Vector3.forward;
         //Move it move it
         bone[rand].AddForce(mayTheForceBeWithYou * danceForce);
-        danceMeter.value += 0.005f;
+        danceMeter.value += danceVal;       
         gameManager.letter.color = Color.green;
     }
 }

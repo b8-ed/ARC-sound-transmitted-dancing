@@ -41,14 +41,14 @@ public class SCR_GameManager : MonoBehaviour {
 
         transform.position = Vector3.Lerp(transform.position, gamePosition.position, Time.deltaTime * 0.85f);
         transform.rotation = Quaternion.Slerp(transform.rotation, gamePosition.rotation, Time.deltaTime * 0.85f);
-
+        
         if (turnOffTimer < 0)
         {
-            StartCoroutine(ChangeKey());
+            //StartCoroutine(ChangeKey());
             finalCountDown.enabled = false;
             start = true;
         }
-  
+
     }
 
     IEnumerator ChangeKey()

@@ -1,0 +1,104 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class STD_Keys : MonoBehaviour {
+
+    public Text keyDisplay;
+    public Slider keyTimeSlider;                     // slider para mostrar el tiempo que tiene el usuario
+    private float timeToPressKey = 2.3f;            // el tiempo que tiene el usuario para presionar la tecla. Es el tiempo entre eventos del koreographer
+    private float deltaSlider = 0.01f;               //que tan seguido va a actualizarse el slider
+    [Tooltip("Todas las teclas posibles a elegir")]
+    public KeyCode[] possibleKeys;                  //todas las teclas posibles (de estas se ira escogiendo 1 random)
+    private KeyCode currentKey = KeyCode.None;      //la tecla que actualmente se muestra en pantalla
+
+    private bool wasCurrentKeyPressed = false;
+
+    public SCR_DanceDance dance;
+
+    private void Start()
+    {
+        HideUI();
+        if(dance == null)
+            dance = FindObjectOfType<SCR_DanceDance>();
+    }
+
+    public KeyCode GetCurrentKey()
+    {
+        return currentKey;
+    }
+
+    //Genera una tecla a presionar random 
+    public void GenerateRandomKey(float currentEventTime, float nextEventTime, int sampleRate, bool isLastEvent = false)
+    {
+        if(possibleKeys != null)
+        {
+            int indexRandKey = Random.Range(0, possibleKeys.Length);
+            keyDisplay.text = possibleKeys[indexRandKey].ToString();
+            wasCurrentKeyPressed = false;
+            currentKey = possibleKeys[indexRandKey];
+            SetTime(currentEventTime, nextEventTime, sampleRate, isLastEvent);   // set max time and slider values
+            keyTimeSlider.gameObject.SetActive(true);   //make sure we're displaying slider
+            StartCoroutine(UpdateSlider());            //start the countdown with the slider
+        }
+    }
+
+    //Funcion que calcula el tiempo hata el siguiente evento
+    //y asigna los valores al slider
+    private void SetTime(float currentEventTime, float nextEventTime, int sampleRate, bool isLastEvent)
+    {
+        Debug.Log("TIME: " + (nextEventTime - currentEventTime) + " Sample Rate: " + sampleRate);
+        if (!isLastEvent)
+            timeToPressKey = ((nextEventTime - currentEventTime)) / 100000;     //formula para sacar el tiempo a partir de sample location
+        else
+            timeToPressKey = 1.5f;
+        keyTimeSlider.maxValue = timeToPressKey;
+        keyTimeSlider.value = timeToPressKey;
+    }
+    
+    IEnumerator UpdateSlider()
+    {
+        yield return new WaitForSeconds(deltaSlider);
+        keyTimeSlider.value -= deltaSlider;
+        if (keyTimeSlider.value > 0 && !wasCurrentKeyPressed) // si ya se presiono la tecla, no sirve seguir actualizando el slider
+            StartCoroutine(UpdateSlider());
+        else if(keyTimeSlider.value <= 0)//if the value reached 0
+        {
+            //if the key was never pressed
+            if(!wasCurrentKeyPressed)
+            {
+                //loose points / punish user or something of the sort
+                dance.Miss();
+            }
+            HideUI();
+        }
+    }
+
+    //Oculta el slider en el que se muestra al usuario el tiempo que tiene para presionar tecla
+    //y el texto del input lo pone vacio
+    void HideUI()
+    {
+        keyTimeSlider.gameObject.SetActive(false);
+        keyDisplay.text = "";
+    }
+    //Muestra el slider en el que se muestra al usuario el tiempo que tiene para presionar tecla
+    void ShowUI()
+    {
+        keyTimeSlider.gameObject.SetActive(true);
+    }
+
+    private void Update()
+    {
+        //Check if current key is pressed
+        if(Input.GetKeyDown(currentKey) && currentKey != KeyCode.None)
+        {
+            wasCurrentKeyPressed = true;
+            currentKey = KeyCode.None;
+            dance.Dance(); //Aumentar su valor de baile / aka win
+            HideUI(); //hide slider
+            Debug.Log("current key pressed!" + currentKey);
+        }
+    }
+
+}

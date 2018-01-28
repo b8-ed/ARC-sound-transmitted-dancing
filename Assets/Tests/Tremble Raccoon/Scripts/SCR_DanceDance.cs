@@ -7,7 +7,7 @@ public class SCR_DanceDance : MonoBehaviour {
     public Rigidbody[] bone;
 
     private float danceForce = 600;
-    private Slider danceMeter;
+    public Slider danceMeter;
     private SCR_GameManager gameManager;
     private float idleTimer = 0.5f;
     private STD_Keys keysManager;//para seguir los inputs del koreographer
@@ -24,6 +24,7 @@ public class SCR_DanceDance : MonoBehaviour {
 
     private void Start()
     {
+        if(danceMeter == null)
         danceMeter = FindObjectOfType<Slider>();
         gameManager = FindObjectOfType<SCR_GameManager>();
         keysManager = FindObjectOfType<STD_Keys>(); 

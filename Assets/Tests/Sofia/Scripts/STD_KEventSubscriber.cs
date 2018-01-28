@@ -74,6 +74,11 @@ public class STD_KEventSubscriber : MonoBehaviour {
                     Debug.Log("No se encontro ):");
 
             }
+            else if(koreographyEvent.GetIntValue() == (int)KoreoInts._2_SondEnded)
+            {
+                //Se acabo el juego
+                keyManager.GameWon();
+            }
             Debug.Log(koreographyEvent.GetIntValue());
         }
     }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/escenario1.unity
     guid: 33f8040fbaa03d6459c346ad99c4a26d
   - enabled: 1
+    path: Assets/Scenes/escenario2.unity
+    guid: 8b9a30f2d5c8b2b4a81f99535fcc8eaa
+  - enabled: 1
     path: Assets/Scenes/escenario3.unity
     guid: dbbe6d8270b13c345b4a60f5483adccd
   - enabled: 1

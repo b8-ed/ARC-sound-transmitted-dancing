@@ -21,11 +21,12 @@ public class SCR_GameManager : MonoBehaviour {
 
     private void Start()
     {
+        start = false;
         key = (char)('A' + Random.Range(0, 26));
         danceParty = FindObjectOfType<Slider>();
         timer = 3.0f;
     }
-
+    
     private void Update()
     {
         KeyCoolDown();

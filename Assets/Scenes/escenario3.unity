@@ -240,6 +240,7 @@ MonoBehaviour:
   dancingPosition: {fileID: 0}
   myChanceToShine: 0
   danceMeter: {fileID: 157547119}
+  squid: {fileID: 1922725773}
 --- !u!195 &17226749
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1080,6 +1081,7 @@ MonoBehaviour:
   dancingPosition: {fileID: 0}
   myChanceToShine: 0
   danceMeter: {fileID: 157547119}
+  squid: {fileID: 1922725773}
 --- !u!195 &241635679
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3311,6 +3313,7 @@ MonoBehaviour:
   dancingPosition: {fileID: 0}
   myChanceToShine: 0
   danceMeter: {fileID: 157547119}
+  squid: {fileID: 1922725773}
 --- !u!195 &1122196766
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4416,6 +4419,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
         type: 2}
+      propertyPath: possibleColors.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
       propertyPath: lightsToChangeColor.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -4481,6 +4489,56 @@ Prefab:
       propertyPath: lightsToChangeColor.Array.data[5]
       value: 
       objectReference: {fileID: 1793157195}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[2].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[3].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[3].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[3].b
+      value: 0.7241378
+      objectReference: {fileID: 0}
+    - target: {fileID: 114160813501360956, guid: 0c8b3b1d2d5b66943be5f6b724a356d5,
+        type: 2}
+      propertyPath: possibleColors.Array.data[3].a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c8b3b1d2d5b66943be5f6b724a356d5, type: 2}
   m_IsPrefabParent: 0
@@ -5380,6 +5438,11 @@ Prefab:
     - {fileID: 95655191744464562, guid: 7a497938f77f4d3488e6a57587a5a537, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7a497938f77f4d3488e6a57587a5a537, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1922725773 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4900503202988308, guid: 7a497938f77f4d3488e6a57587a5a537,
+    type: 2}
+  m_PrefabInternal: {fileID: 1922725772}
 --- !u!1 &1923012607
 GameObject:
   m_ObjectHideFlags: 0

@@ -135,6 +135,11 @@ public class STD_Keys : MonoBehaviour {
         keyTimeSlider.gameObject.SetActive(true);
     }
 
+    public void GameWon()
+    {
+        dance.GameOver(true);
+    }
+
     private void Update()
     {
         //Check if current key is pressed

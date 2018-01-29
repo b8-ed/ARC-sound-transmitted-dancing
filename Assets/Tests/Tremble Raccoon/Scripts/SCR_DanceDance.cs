@@ -89,11 +89,47 @@ public class SCR_DanceDance : MonoBehaviour {
             }
     }
 
+    //public void Dance()
+    //{
+    //    //mostrar random pun
+    //    int randPun = Random.Range(0, puns.Length + 5);
+    //    if(randPun < puns.Length)
+    //    {
+    //        puns[randPun].DisplayPun();
+    //    }
+
+    //    danceMeterValue += danceVal;
+
+    //    //Reset Idle Timer
+    //    idleTimer = 0.5f;
+    //    //Get a random bone
+    //    int rand = Random.Range(0, bone.Length);
+    //    //Get a random force direction
+    //    int randDirection = Random.Range(0, 3);
+    //    Vector3 mayTheForceBeWithYou;
+    //    //Set the force direction
+    //    if (randDirection == (int)DanceDirection.UP)
+    //        mayTheForceBeWithYou = Vector3.up;
+    //    else if (randDirection == (int)DanceDirection.FORWARD)
+    //        mayTheForceBeWithYou = Vector3.forward;
+    //    else
+    //        mayTheForceBeWithYou = -Vector3.forward;
+    //    danceMeterValue += danceVal;
+
+    //    direction *= -1;
+    //    int randomNum = Random.Range(0, bone.Length);
+    //    for (int i = 0; i < 4; i++)
+    //    {
+    //        if (randomNum + i < bone.Length)
+    //            bone[randomNum + i].AddForce(((direction * Vector3.right) + mayTheForceBeWithYou) * danceForce);
+    //    }
+    //}
+
     public void Dance()
     {
         //mostrar random pun
         int randPun = Random.Range(0, puns.Length + 5);
-        if(randPun < puns.Length)
+        if (randPun < puns.Length)
         {
             puns[randPun].DisplayPun();
         }
@@ -105,23 +141,27 @@ public class SCR_DanceDance : MonoBehaviour {
         //Get a random bone
         int rand = Random.Range(0, bone.Length);
         //Get a random force direction
-        int randDirection = Random.Range(0, 3);
         Vector3 mayTheForceBeWithYou;
-        //Set the force direction
-        if (randDirection == (int)DanceDirection.UP)
-            mayTheForceBeWithYou = Vector3.up;
-        else if (randDirection == (int)DanceDirection.FORWARD)
-            mayTheForceBeWithYou = Vector3.forward;
-        else
-            mayTheForceBeWithYou = -Vector3.forward;
+
         danceMeterValue += danceVal;
 
-        direction *= -1;
-        int randomNum = Random.Range(0, bone.Length);
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < bone.Length; i++)
         {
-            if (randomNum + i < bone.Length)
-                bone[randomNum + i].AddForce(((direction * Vector3.right) + mayTheForceBeWithYou) * danceForce);
+            if (rand < 3)
+                direction *= -1;
+
+            //Set the force direction
+            int randDirection = Random.Range(0, 3);
+
+            if (randDirection == (int)DanceDirection.UP)
+                mayTheForceBeWithYou = Vector3.up;
+            else if (randDirection == (int)DanceDirection.FORWARD)
+                mayTheForceBeWithYou = Vector3.forward;
+            else
+                mayTheForceBeWithYou = -Vector3.forward;
+
+
+            bone[i].AddForce(((direction * Vector3.right) + mayTheForceBeWithYou) * danceForce);
         }
     }
 }
